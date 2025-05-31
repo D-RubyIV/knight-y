@@ -89,10 +89,10 @@ class Application(QtWidgets.QMainWindow, Ui_MainWindow):
             time.sleep(1)
 
         time.sleep(5)
-        for index, data in enumerate(find_handle("YouTube - Google Chrome")):
+        for index, data in enumerate(find_handle("Youtube")):
             hwnd_chrome, title = data
             print(hwnd_chrome, title)
-            if "YouTube - Google Chrome" in title:
+            if "Youtube" in title:
                 # Gán vào frame tương ứng
                 frame = browser_frames[index]
                 hwnd_qt = int(frame.winId())

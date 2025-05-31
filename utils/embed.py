@@ -16,6 +16,7 @@ def enum_windows_callback(hwnd, windows):
 def find_handle(title_window="GPM-Browser"):
     handles = []
     win32gui.EnumWindows(enum_windows_callback, handles)
+    print(handles)
     handles = [(hwnd, title) for hwnd, title in handles if title_window in title]
     return handles
 
